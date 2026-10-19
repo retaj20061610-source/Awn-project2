@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إضافة كتاب أو ملزمة | عون</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">عن عون</a></li>
+        <li><a href="how-it-works.html">كيف تعمل المنصة</a></li>
+        <li><a href="books.html">المقررات والكتب</a></li>
+        <li><a href="add-book.html">إضافة كتاب أو ملزمة</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
+    </ul>
+</nav>
+<main class="add-book-page">
+<h1>ساهمي بعلمك مع عون 💚</h1>
+
+<p>
+    عندك كتاب أو ملزمة؟ شاركيها مع زميلاتك وساعديهن في رحلتهن التعليمية.
+</p>
+</main>
+
+<form id="bookForm">
+
+    <label for="studentName">اسم الطالبة</label>
+    <input type="text" id="studentName" required>
+
+    <label for="phone">رقم التواصل</label>
+<input
+    type="tel"
+    id="phone"
+    name="phone"
+    placeholder="05xxxxxxxx"
+    pattern="05[0-9]{8}"
+    maxlength="10"
+    required
+>
+    <label for="bookName">اسم الكتاب أو الملزمة</label>
+    <input type="text" id="bookName" required>
+
+    <label for="courseName">اسم المقرر</label>
+    <input type="text" id="courseName" required>
+
+    <label for="bookType">نوع المساهمة</label>
+    <select id="bookType" required>
+        <option value="">اختاري نوع المساهمة</option>
+        <option value="electronic">ملف إلكتروني</option>
+        <option value="printed">كتاب أو ملزمة مطبوعة للاستعارة</option>
+    </select>
+
+    <label for="bookDescription">وصف الكتاب أو الملزمة</label>
+    <textarea id="bookDescription" rows="4"
+        placeholder="اكتبي وصفًا مختصرًا"></textarea>
+
+    <label for="bookFile">ملف الكتاب (اختياري)</label>
+    <input type="file" id="bookFile" accept=".pdf">
+
+    <button type="submit">إضافة للمكتبة</button>
+
+    <p id="formMessage" role="status"></p>
+
+</form>
